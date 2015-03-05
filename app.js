@@ -1,5 +1,8 @@
-var express = require('express');
-var app = express();
+#!/usr/bin/env node
+
+var express = require('express'),
+	app = express();
+
 
 // GET /static/style.css etc.
 app.use('/app', express.static(__dirname + '/app'));
