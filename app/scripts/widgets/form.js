@@ -12,8 +12,9 @@ YUI.add('transactionForm', function(Y) {
     },
     
     renderUI: function() {
-      this.get('contentBox')
-        .append(Y.one('#form-template').getHTML());
+      Y.log(this.get('type'));
+        this.get('contentBox')
+          .append(Y.one('#form-template').getHTML());
     },
 
     bindUI: function() {

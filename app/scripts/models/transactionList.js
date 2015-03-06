@@ -16,6 +16,9 @@
 	        var lastIndex = list.length -1;
 	        
 	        return list[lastIndex];
+	      },
+	      length: function() {
+	      	return this.toArray().length;
 	      }
 	  });
 

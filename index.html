@@ -4,13 +4,7 @@
     <title> YUI Sample App </title>
     <link rel="stylesheet" href="app/styles/main.css">
   </head>
-<body>
-
-  <header class="header">
-    <div class="container">
-      <h2 class="title"></h2>
-    </div>  
-  </header>
+<body class="wf2-skin-nx wf2-skin-nxt wf2-skin-nxs wf2-skin-sketch">
 
   <div class="container">
     <div class="content-wrap">
@@ -26,17 +20,31 @@
       </h3>
 
       <form>
-        <div class="form-group">
+        <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
+          
           <label for="bankName"> Bank Name</label>
-          <input type="text" class="bank-name form-control" placeholder="Enter Bank Name">
-        </div>
-        
-        <div class="form-group">        
-          <label for="transferAmount"> Transfer Amount </label>
-          <input type="text" class="transfer-amount form-control" placeholder="Enter Transfer Amount">
+
+          <div class="wf2-field-body wf2-textinput">
+            <div class="wf2-field-state">
+                <input type="text" class="bank-name wf2-field-control" placeholder="Enter Bank Name">
+            </div>
+          </div>
+
         </div>
 
-      <button type="submit" class="new-transaction btn btn-default">
+        <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
+          
+          <label for="transferAmount"> Transfer Amount </label>
+
+          <div class="wf2-field-body wf2-textinput">
+            <div class="wf2-field-state">
+                <input type="text" class="transfer-amount wf2-field-control" placeholder="Enter Transfer Amount">
+            </div>
+          </div>
+
+        </div>
+
+      <button type="submit" class="new-transaction wf2-button yui3-button wf2-button-primary">
         Create Payment
       </button>
       </form>
@@ -45,9 +53,6 @@
 
   </script>
 
-    <!-- <button class="all-transactions">
-      All Transactions
-    </button> -->
   <script id="transaction-template" type="text/x-handlebars-template"></script>
 
   <script id="send-template" type="text/x-handlebars-template">
@@ -58,51 +63,53 @@
       </h3>
 
       <form>
-        <div class="form-group">
+      {{#if id}}
+        <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
           <label for="id"> 
             ID: 
           </label>
-          <p> 
-            {id}
+          <p class="static-value"> 
+            {{id}}
           </p>
         </div>
+      {{/if}}
 
-        <div class="form-group">
+        <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
           <label for="bankName"> 
             Bank Name: 
           </label>
           
           <div class="static-value-wrap">
             <p class="static-value"> 
-              {bankName} 
+              {{bankName}}
             </p>
           </div>
 
           <div class="input-value-wrap">
-            <input type="text" class="bank-name input-value form-control" value="{bankName}" placeholder="Enter Bank Name">
+            <input type="text" class="bank-name input-value form-control" value="{{bankName}}" placeholder="Enter Bank Name">
           </div>
 
         </div>
         
-        <div class="form-group">
+        <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
           <label for="transferAmount"> 
             Transfer Amount: 
           </label>
 
           <div class="static-value-wrap">
             <p class="static-value"> 
-              {transferAmount}
+              ${{transferAmount}}
             </p>
           </div>
 
           <div class="input-value-wrap">
-            <input type="text" class="transfer-amount input-value form-control" value="{transferAmount}" placeholder="Enter Transfer Amount">
+            <input type="text" class="transfer-amount input-value form-control" value="{{transferAmount}}" placeholder="Enter Transfer Amount">
           </div>
         </div>
 
       </form>
 
-      <button class="send-payment btn btn-default">
+      <button class="send-payment wf2-button yui3-button wf2-button-primary">
         Send Payment
       </button>
 
@@ -116,14 +123,18 @@
       <h3> 
         Success! 
       </h3>
-      <h3> 
-        Amount: {transferAmount} <br/>
-        Sent To: {bankName}
-      </h3>
+
+      <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
+        <p>
+          You transfered {transferAmount} to {bankName} !
+        </p>
+      </div>
+        
       <button class="btn btn-default">
         New Transfer
       </button>
     </div>
+
   </script>
 
   <script id="list-template" type="text/x-handlebars-template">
@@ -156,14 +167,7 @@
     </ul>
   </script>
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-  <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+  <script src="https://hxbbfb75.etforge.com/2.5.0/build/wf2/wf2-min.js"></script>
   <script src="app/scripts/main.js"></script>
 
 </body>
