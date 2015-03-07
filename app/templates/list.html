@@ -1,0 +1,27 @@
+<button class="new-transfer">
+    << Back
+  </button>
+
+  <button class="clear-list">
+    Clear Transactions
+  </button>
+
+  <h2> 
+    All Transactions
+  </h2>
+
+  <ul>
+    {{#transactions}}
+      <li>
+        <p>
+          {{id}} 
+        </p>
+        <p>
+          {{bankName}}
+        </p>
+        <p>
+          {{transferAmount}}
+        </p>
+      </li>
+    {{/transactions}}
+  </ul>

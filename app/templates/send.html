@@ -1,0 +1,58 @@
+  <div class="template-content-wrap">
+    
+    <h3 class="form-widget-header"> 
+      Form Widget: Edit
+    </h3>
+
+    <form>
+    {{#if id}}
+      <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
+        <label for="id"> 
+          ID: 
+        </label>
+        <p class="static-value"> 
+          {{id}}
+        </p>
+      </div>
+    {{/if}}
+
+      <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
+        <label for="bankName"> 
+          Bank Name: 
+        </label>
+        
+        <div class="static-value-wrap">
+          <p class="static-value"> 
+            {{bankName}}
+          </p>
+        </div>
+
+        <div class="input-value-wrap">
+          <input type="text" class="bank-name input-value form-control" value="{{bankName}}" placeholder="Enter Bank Name">
+        </div>
+
+      </div>
+      
+      <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
+        <label for="transferAmount"> 
+          Transfer Amount: 
+        </label>
+
+        <div class="static-value-wrap">
+          <p class="static-value"> 
+            ${{transferAmount}}
+          </p>
+        </div>
+
+        <div class="input-value-wrap">
+          <input type="text" class="transfer-amount input-value form-control" value="{{transferAmount}}" placeholder="Enter Transfer Amount">
+        </div>
+      </div>
+
+    </form>
+
+    <button class="send-payment wf2-button yui3-button wf2-button-primary">
+      Send Payment
+    </button>
+
+  </div>

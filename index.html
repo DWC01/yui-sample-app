@@ -5,166 +5,24 @@
     <link rel="stylesheet" href="app/styles/main.css">
   </head>
 <body class="wf2-skin-nx wf2-skin-nxt wf2-skin-nxs wf2-skin-sketch">
+  <h1 class="center">
+    Sample Global Wires App Flow 
+  </h1>
 
-  <div class="container">
-    <div class="content-wrap">
-      <div class="app-flow" data-view="homeView"></div>
+  <div class="wf2-g-r">
+    <div class="wf2-desktop-3 wf2-tablet-landscape-2 wf2-tablet-1 wf2-tablet-small-1">
+        <div class="wf2-u">
+          <div id="grids" class="content">
+            <div id="app-flow"></div>
+          </div>
+        </div>
     </div>
   </div>
-
-  <script id="form-template" type="text/x-handlebars-template">
-
-    <div class="template-content-wrap">
-      <h3 class="form-widget-header"> 
-        Form Widget: Create
-      </h3>
-
-      <form>
-        <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
-          
-          <label for="bankName"> Bank Name</label>
-
-          <div class="wf2-field-body wf2-textinput">
-            <div class="wf2-field-state">
-                <input type="text" class="bank-name wf2-field-control" placeholder="Enter Bank Name">
-            </div>
-          </div>
-
-        </div>
-
-        <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
-          
-          <label for="transferAmount"> Transfer Amount </label>
-
-          <div class="wf2-field-body wf2-textinput">
-            <div class="wf2-field-state">
-                <input type="text" class="transfer-amount wf2-field-control" placeholder="Enter Transfer Amount">
-            </div>
-          </div>
-
-        </div>
-
-      <button type="submit" class="new-transaction wf2-button yui3-button wf2-button-primary">
-        Create Payment
-      </button>
-      </form>
-
-    </div>
-
-  </script>
-
-  <script id="transaction-template" type="text/x-handlebars-template"></script>
-
-  <script id="send-template" type="text/x-handlebars-template">
-
-    <div class="template-content-wrap">
-      <h3 class="form-widget-header"> 
-        Form Widget: Edit
-      </h3>
-
-      <form>
-      {{#if id}}
-        <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
-          <label for="id"> 
-            ID: 
-          </label>
-          <p class="static-value"> 
-            {{id}}
-          </p>
-        </div>
-      {{/if}}
-
-        <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
-          <label for="bankName"> 
-            Bank Name: 
-          </label>
-          
-          <div class="static-value-wrap">
-            <p class="static-value"> 
-              {{bankName}}
-            </p>
-          </div>
-
-          <div class="input-value-wrap">
-            <input type="text" class="bank-name input-value form-control" value="{{bankName}}" placeholder="Enter Bank Name">
-          </div>
-
-        </div>
-        
-        <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
-          <label for="transferAmount"> 
-            Transfer Amount: 
-          </label>
-
-          <div class="static-value-wrap">
-            <p class="static-value"> 
-              ${{transferAmount}}
-            </p>
-          </div>
-
-          <div class="input-value-wrap">
-            <input type="text" class="transfer-amount input-value form-control" value="{{transferAmount}}" placeholder="Enter Transfer Amount">
-          </div>
-        </div>
-
-      </form>
-
-      <button class="send-payment wf2-button yui3-button wf2-button-primary">
-        Send Payment
-      </button>
-
-    </div>
-
-  </script>
-
-  <script id="success-template" type="text/x-handlebars-template">
-
-    <div class="template-content-wrap"> 
-      <h3> 
-        Success! 
-      </h3>
-
-      <div class="yui3-widget wf2-field wf2-field-content wf2-field-text auto medium wf2-field-focused">
-        <p>
-          You transfered {transferAmount} to {bankName} !
-        </p>
-      </div>
-        
-      <button class="btn btn-default">
-        New Transfer
-      </button>
-    </div>
-
-  </script>
-
-  <script id="list-template" type="text/x-handlebars-template">
-    <button class="new-transfer">
-      << Back
-    </button>
-
-    <button class="clear-list">
-      Clear Transactions
-    </button>
-
-    <h2> 
-      All Transactions
-    </h2>
-
-    <ul>
-      {{#transactions}}
-        <li>
-          <p>
-            {{id}} 
-          </p>
-          <p>
-            {{bankName}}
-          </p>
-          <p>
-            {{transferAmount}}
-          </p>
-        </li>
-      {{/transactions}}
-    </ul>
+  
+  <script id="transaction-template" type="text/x-handlebars-template">
+    <h1> 
+      Transaction Template Displaying 
+    </h1>
   </script>
 
   <script src="https://hxbbfb75.etforge.com/2.5.0/build/wf2/wf2-min.js"></script>
